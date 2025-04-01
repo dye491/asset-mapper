@@ -5,14 +5,16 @@
         <title>{% block title %}Mixed Vinyl{% endblock %}</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
 
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
         {% endblock %}
 
         {% block javascripts %}
+            {{ importmap() }}
             <script src="https://kit.fontawesome.com/5a377fab5b.js" crossorigin="anonymous"></script>
         {% endblock %}
     </head>
@@ -44,6 +46,8 @@
             </nav>
             <!-- End Main Navigation -->
         </div>
+
+        <img src="{{ asset('images/penguin.png') }}" alt="">
 
         {% block body %}{% endblock %}
 
